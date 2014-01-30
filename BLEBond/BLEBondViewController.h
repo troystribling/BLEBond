@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface BLEBondViewController : UIViewController
+@interface BLEBondViewController : UIViewController <CBCentralManagerDelegate, CBPeripheralDelegate>
 
 @end

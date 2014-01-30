@@ -21,6 +21,8 @@
 		05AC72CC1899FA1D0060D03F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AC72AE1899FA1D0060D03F /* UIKit.framework */; };
 		05AC72D41899FA1D0060D03F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05AC72D21899FA1D0060D03F /* InfoPlist.strings */; };
 		05AC72D61899FA1D0060D03F /* BLEBondTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AC72D51899FA1D0060D03F /* BLEBondTests.m */; };
+		05AC72E01899FCF90060D03F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AC72DF1899FCF90060D03F /* CoreBluetooth.framework */; };
+		05AC72E4189A1D750060D03F /* CBUUID+StringValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AC72E3189A1D750060D03F /* CBUUID+StringValue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		05AC72D11899FA1D0060D03F /* BLEBondTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLEBondTests-Info.plist"; sourceTree = "<group>"; };
 		05AC72D31899FA1D0060D03F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		05AC72D51899FA1D0060D03F /* BLEBondTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEBondTests.m; sourceTree = "<group>"; };
+		05AC72DF1899FCF90060D03F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		05AC72E2189A1D750060D03F /* CBUUID+StringValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+StringValue.h"; sourceTree = "<group>"; };
+		05AC72E3189A1D750060D03F /* CBUUID+StringValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+StringValue.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05AC72E01899FCF90060D03F /* CoreBluetooth.framework in Frameworks */,
 				05AC72AD1899FA1D0060D03F /* CoreGraphics.framework in Frameworks */,
 				05AC72AF1899FA1D0060D03F /* UIKit.framework in Frameworks */,
 				05AC72AB1899FA1D0060D03F /* Foundation.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		05AC72A91899FA1D0060D03F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05AC72DF1899FCF90060D03F /* CoreBluetooth.framework */,
 				05AC72AA1899FA1D0060D03F /* Foundation.framework */,
 				05AC72AC1899FA1D0060D03F /* CoreGraphics.framework */,
 				05AC72AE1899FA1D0060D03F /* UIKit.framework */,
@@ -112,6 +119,8 @@
 		05AC72B01899FA1D0060D03F /* BLEBond */ = {
 			isa = PBXGroup;
 			children = (
+				05AC72E2189A1D750060D03F /* CBUUID+StringValue.h */,
+				05AC72E3189A1D750060D03F /* CBUUID+StringValue.m */,
 				05AC72B91899FA1D0060D03F /* BLEBondAppDelegate.h */,
 				05AC72BA1899FA1D0060D03F /* BLEBondAppDelegate.m */,
 				05AC72BC1899FA1D0060D03F /* Main.storyboard */,
@@ -252,6 +261,7 @@
 			files = (
 				05AC72B71899FA1D0060D03F /* main.m in Sources */,
 				05AC72BB1899FA1D0060D03F /* BLEBondAppDelegate.m in Sources */,
+				05AC72E4189A1D750060D03F /* CBUUID+StringValue.m in Sources */,
 				05AC72C11899FA1D0060D03F /* BLEBondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
