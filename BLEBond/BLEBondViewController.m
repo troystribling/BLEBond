@@ -71,7 +71,7 @@
 		}
 		case CBCentralManagerStatePoweredOn: {
             NSLog(@"CBCentralManager Powered ON");
-            [self.cbCentral scanForPeripheralsWithServices:nil options:nil];
+            [self.cbCentral scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey:[NSNumber numberWithBool:NO]}];
 			break;
 		}
 		case CBCentralManagerStateResetting: {
@@ -111,7 +111,11 @@
 }
 
 - (void)peripheral:(CBPeripheral*)peripheral didUpdateValueForCharacteristic:(CBCharacteristic*)characteristic error:(NSError*)error {
-    NSLog(@"Update value for characteristic: %@", [characteristic.UUID stringValue]);
+    if (error) {
+        NSLog(@"Error: %@", [error localizedDescription]);
+    } else {
+        NSLog(@"Update value for characteristic: %@", [characteristic.UUID stringValue]);
+    }
 }
 
 - (void)peripheral:(CBPeripheral*)peripheral didUpdateValueForDescriptor:(CBDescriptor*)descriptor error:(NSError*)error {
